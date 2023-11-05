@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .font-primary {
+        @apply text-zinc-700;
+    }
+    .font-secondary {
+        @apply text-zinc-500;
+    }
+    .menu-link-a {
+        @apply font-primary transition-all duration-300 px-2 py-1 rounded-lg font-semibold hover:font-secondary hover:underline hover:underline-offset-2;
+    }
+    .menu-button {
+        @apply border rounded-full p-2;
+    }
+
+    .flex-all-center {
+        @apply flex justify-center items-center;
+    }
+    .flex-all-between {
+        @apply flex justify-between items-center;
+    }
+    .flex-col-all-center {
+        @apply flex-all-center flex-col;
+    }
+    .flex-col-all-between {
+        @apply flex-all-between flex-col;
+    }
+  }
