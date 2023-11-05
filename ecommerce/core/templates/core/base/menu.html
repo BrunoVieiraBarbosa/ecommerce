@@ -1,0 +1,56 @@
+{% load static %}
+<header class="flex justify-center font-primary">
+    <div class="flex-col-all-center max-sm:w-full w-6/12 gap-y-1 p-2">
+        <div class="max-sm:flex-col-all-center max-sm:gap-y-2 w-full flex-all-between gap-x-3">
+            <div class="flex gap-x-3">
+                <span class="menu-button">Icon</span>
+                <button class="menu-button">
+                    <div class="flex gap-x-1">
+                        <span class="font-semibold">CEP</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+            <form action="." method="get" class="w-full">
+                <input type="text" name="" id="" placeholder="Procure um produto"
+                class="rounded-lg border border-black/20 w-full p-2 px-3">
+            </form>
+            <div class="flex gap-x-3">
+                <!-- <button class="menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button> -->
+                <button class="menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </button>
+                <button class="menu-button">
+                    <div class="flex gap-x-1">
+                        <span class="font-semibold">Conta</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <nav class="flex justify-center gap-5">
+            <a href="#" class="menu-link-a">Ofertas</a>
+            <a href="#" class="menu-link-a">Produtos</a>
+            <a href="#" class="menu-link-a">Categorias</a>
+        </nav>
+    </div>
+</header>
