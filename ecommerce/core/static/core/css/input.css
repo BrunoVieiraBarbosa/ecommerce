@@ -12,9 +12,6 @@
     .menu-link-a {
         @apply font-primary transition-all duration-300 px-2 py-1 rounded-lg font-semibold hover:font-secondary hover:underline hover:underline-offset-2;
     }
-    .menu-button {
-        @apply border rounded-full p-2;
-    }
 
     .flex-all-center {
         @apply flex justify-center items-center;
