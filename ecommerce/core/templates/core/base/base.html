@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'core/css/output.css' %}" rel="stylesheet">
-    {% block head %}
-    {% endblock %}
+
+    {% block head %}{% endblock %}
+    {% block js %}{% endblock %}
+
+    <script src="{% static 'core/js/menu.js' %}"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>

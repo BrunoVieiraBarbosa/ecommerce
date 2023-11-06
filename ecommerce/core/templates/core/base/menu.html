@@ -1,10 +1,92 @@
 {% load static %}
 <header class="flex justify-center font-primary">
-    <div class="flex-col-all-center max-sm:w-full w-6/12 gap-y-1 p-2">
-        <div class="max-sm:flex-col-all-center max-sm:gap-y-2 w-full flex-all-between gap-x-3">
-            <div class="flex gap-x-3">
-                <span class="menu-button">Icon</span>
-                <button class="menu-button">
+    <div id="side-menu" class="absolute -left-full top-2 p-2 rounded-se-lg rounded-ee-lg transition-all duration-300 ease-in-out bg-zinc-100">
+        <div class="absolute -right-1 top-0 translate-x-full">
+            <button onclick="showMenu()" class="border rounded-lg p-1 bg-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <!-- Não logado -->
+        <div class="flex flex-col">
+            <div class="flex items-center gap-x-2">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <span class="text-xs">
+                    Faça o <a href="#" class="text-blue-300 font-bold">login</a> ou 
+                    <a href="#" class="text-blue-300 font-bold">cadastre-se</a>
+                </span>
+            </div>
+            <div class="mt-5">
+                <hr class="mb-1">
+                <div class="flex justify-start items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package">
+                        <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                        </path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                    <span class="text-xs">
+                        Para ver seus pedidos por favor faça login
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-col-all-center w-1/2 max-xl:w-full gap-y-1 p-2">
+        <div class="flex-col-all-center gap-y-2 w-full flex-all-between gap-x-3">
+            <div class="hidden max-sm:flex max-sm:flex-col gap-2 w-full">
+                <div class="flex justify-between">
+                    <button onclick="showMenu()" class="border rounded-lg p-1 bg-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <button class="font-sans text-lg font-semibold">Meu Ecommerce</button>
+                    <div class="flex gap-x-3">
+                        <button>
+                            <div class="flex gap-x-1">
+                                <span class="font-semibold">CEP</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                        </button>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <form action="." method="get" class="w-full">
+                    <input type="text" name="" id="" placeholder="Procure um produto"
+                    class="rounded-lg border border-black/20 w-full p-2 px-3">
+                </form>
+            </div>
+            <div class="max-sm:hidden flex w-full gap-x-4">
+                <button class="menu-link-a text-lg font-semibold whitespace-nowrap">Meu Ecommerce</button>
+                <button class="menu-link-a">
                     <div class="flex gap-x-1">
                         <span class="font-semibold">CEP</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -14,20 +96,11 @@
                         </svg>
                     </div>
                 </button>
-            </div>
-            <form action="." method="get" class="w-full">
-                <input type="text" name="" id="" placeholder="Procure um produto"
-                class="rounded-lg border border-black/20 w-full p-2 px-3">
-            </form>
-            <div class="flex gap-x-3">
-                <!-- <button class="menu-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </button> -->
-                <button class="menu-button">
+                <form action="." method="get" class="w-full">
+                    <input type="text" name="" id="" placeholder="Procure um produto"
+                    class="rounded-lg border border-black/20 w-full p-2 px-3">
+                </form>
+                <button class="menu-link-a">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
                         <circle cx="9" cy="21" r="1"></circle>
@@ -35,7 +108,7 @@
                         <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                     </svg>
                 </button>
-                <button class="menu-button">
+                <button class="menu-link-a">
                     <div class="flex gap-x-1">
                         <span class="font-semibold">Conta</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
